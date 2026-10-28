@@ -1,0 +1,32 @@
+:root{--bg:#f6efe6;--card:#fffaf4;--ink:#3d342c;--soft:#8a7b6d;--acc:#c9825b;--acc2:#e9c9b3;--ok:#7a9a7e;--line:#eadccd}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--ink);font-family:"Pretendard","Noto Sans KR",system-ui,sans-serif;font-size:17px;line-height:1.55}
+header{position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:8px;padding:12px 16px;background:var(--bg);border-bottom:1px solid var(--line)}
+h1{font-size:19px;margin:0;flex:1}#saved{font-size:13px;color:var(--ok)}
+main{max-width:560px;margin:0 auto;padding:16px 16px 110px}
+button{font:inherit;min-height:48px;border-radius:14px;border:0;padding:10px 18px;background:var(--acc);color:#fff;cursor:pointer}
+button.ghost{background:transparent;color:var(--acc);padding:8px 10px}button.light{background:var(--acc2);color:var(--ink)}button.danger{background:#b5654f}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px;margin:0 0 14px;box-shadow:0 2px 6px #0000000a}
+.rec{display:flex;align-items:center;gap:12px}.rec .txt{flex:1;min-width:0}.rec .t{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.rec .d{font-size:13px;color:var(--soft)}
+.badge{font-size:13px;padding:4px 10px;border-radius:99px;background:var(--acc2);white-space:nowrap}.badge.done{background:#d6e5d6}
+.bar{height:6px;border-radius:9px;background:var(--line);margin-top:8px;overflow:hidden}.bar i{display:block;height:100%;background:var(--acc)}
+label{display:block;font-weight:600;margin:16px 0 6px}.hint{font-size:14px;color:var(--soft);margin:-2px 0 8px;background:#f3e6d8;border-radius:10px;padding:8px 10px}
+textarea{width:100%;min-height:96px;font:inherit;border:1px solid var(--line);border-radius:14px;padding:12px;background:#fff;color:var(--ink);resize:vertical}
+textarea::placeholder{color:#b8a898}textarea:focus{outline:2px solid var(--acc2)}
+.steps{display:flex;gap:6px;margin-bottom:14px}.steps button{flex:1;min-height:44px;padding:4px;font-size:14px;background:var(--line);color:var(--ink)}
+.steps button.on{background:var(--acc);color:#fff}.steps button.ok:not(.on){background:#d6e5d6}
+h2{font-size:20px;margin:4px 0 2px}.sub{color:var(--soft);font-size:15px;margin:0 0 6px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}.chip{min-height:44px;background:#fff;color:var(--ink);border:1.5px solid var(--line);padding:8px 14px;text-align:left}
+.chip.on{background:var(--acc);color:#fff;border-color:var(--acc)}.dist .chip{width:100%}.chip small{display:block;font-size:13px;opacity:.8;font-weight:400}
+.nav{position:fixed;left:0;right:0;bottom:0;background:var(--bg);border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom));display:flex;gap:10px;justify-content:center}
+.nav button{flex:1;max-width:270px}
+.row{display:flex;gap:10px;flex-wrap:wrap}.center{text-align:center}
+input[type=range]{width:100%;height:40px;accent-color:var(--acc)}
+.thought{position:relative;height:150px;overflow:hidden;border-radius:16px;background:linear-gradient(#e8f0f2,#f6efe6);margin:10px 0}
+.leaf{position:absolute;left:50%;top:40%;transform:translate(-50%,-50%);background:#fff;border-radius:16px;padding:10px 14px;max-width:85%;box-shadow:0 4px 12px #0001;font-size:15px;transition:transform 6s ease-in,opacity 6s ease-in}
+.leaf.away{transform:translate(120%,-160%) rotate(12deg);opacity:0}
+.breath{width:130px;height:130px;margin:14px auto;border-radius:50%;background:radial-gradient(#f3d9c6,#e9c9b3);display:flex;align-items:center;justify-content:center;font-size:15px;transition:transform 4s ease-in-out}
+.breath.in{transform:scale(1.25)}
+.empty{text-align:center;color:var(--soft);padding:30px 10px}.note{font-size:13px;color:var(--soft);text-align:center;margin-top:20px}
+dialog{border:0;border-radius:18px;padding:20px;max-width:320px;background:var(--card);color:var(--ink)}dialog::backdrop{background:#0004}
+.quote{background:#fff;border-left:4px solid var(--acc);border-radius:10px;padding:10px 12px;margin:8px 0}
+@media (prefers-reduced-motion:reduce){.leaf,.breath{transition:none}}
